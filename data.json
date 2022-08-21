@@ -1,0 +1,36 @@
+{
+  "title": "WTF mate",
+  "description": "An app that asks; WTF?",
+  "main_body": ["main",
+    ["div",
+     ["ul",
+      ["li", "heyyyy"],
+      ["li", "hoooo"],
+      ["li", "heyyyy"],
+      ["li", "hoooo"]
+     ],
+     ["p", "LEMME hear you say..."],
+     ["ul",
+      ["li", "heyyyy"],
+      ["li", "hoooo"],
+      ["li", "heyyyy"],
+      ["li", "hoooo"],
+     ]
+    ],
+    ["div",
+     ["ul",
+      ["li", "heyyyy"],
+      ["li", "hoooo"],
+      ["li", "heyyyy"],
+      ["li", "hoooo"]
+     ],
+     ["p", "LEMME hear you say..."],
+     ["ul",
+      ["li", "heyyyy"],
+      ["li", "hoooo"],
+      ["li", "heyyyy"],
+      ["li", "hoooo"]
+     ]
+    ]
+   ]
+}
