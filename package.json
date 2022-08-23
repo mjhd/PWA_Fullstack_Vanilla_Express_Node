@@ -1,8 +1,8 @@
 {
-  "name": "nodejs",
+  "name": "WTF Mate",
   "type": "module",
   "version": "1.0.0",
-  "description": "",
+  "description": "An app that asks; WTF?",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -15,6 +15,7 @@
     "express": "4.13.4",
     "express-session": "1.13.0",
     "mysql": "^2.18.1",
-    "node-fetch": "^3.2.6"
+    "node-fetch": "^3.2.6",
+    "sass": "1.54.5"
   }
 }
