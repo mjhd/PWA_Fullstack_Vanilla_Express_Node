@@ -1,3 +1,3 @@
 # Fullstack_Vanilla_Express_Node
 
-A weird fullstack experiment in Node/Express without React
+A more web app feel and cleaned up structure with Node/Express without React
