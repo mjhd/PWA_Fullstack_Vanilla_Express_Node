@@ -15,6 +15,7 @@ window.addEventListener("load", function(){
   window.app_data_lists.made.unshift("made")
   window.app_data_lists.spent.unshift("spent")
   window.app_data_lists.net.unshift("net")
+  window.app_data_lists.total.unshift("total")
 
   let date_count = 0
 
@@ -23,6 +24,7 @@ window.addEventListener("load", function(){
     data: {
       columns: [
         balances,
+        window.app_data_lists.total,
         window.app_data_lists.made,
         window.app_data_lists.spent,
         window.app_data_lists.net

@@ -13,14 +13,14 @@ app.get('/', function (req, res) {
     let document = app.app_functions.assemble_document("assets/head.html", ["assets/home_view.scss"])
 
     let app_data = JSON.parse(data)
-    let total_made = 0.00
-    let total_spent = 0.00
+    let total = 0.00
 
-    let app_data_lists = {list: [], dates: [], made: [], spent: [], net: []}
+    let app_data_lists = {list: [], dates: [], made: [], spent: [], net: [], total: []}
     for (let entry of app_data.data){
       let made = parseFloat(entry.made.toFixed(2))
       let spent = parseFloat(entry.spent.toFixed(2))
       let net = parseFloat((made - spent).toFixed(2))
+      total = parseFloat((total + net).toFixed(2))
 
       let list = entry
       list.net = net
@@ -30,9 +30,7 @@ app.get('/', function (req, res) {
       app_data_lists.made.push(made)
       app_data_lists.spent.push(spent)
       app_data_lists.net.push(net)
-      total_made += made
-      total_spent += spent
-
+      app_data_lists.total.push(total)
     }
 
     let app_data_set = '<script type="text/javascript">window.app_data_lists = ' + JSON.stringify(app_data_lists) + "</script>"
