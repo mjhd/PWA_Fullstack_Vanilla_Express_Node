@@ -1,4 +1,6 @@
-app.set_options = function(res, options) {
+app.app_functions = {}
+  
+app.app_functions.set_options = function(res, options) {
   res.header("Access-Control-Allow-Origin", '*')
 
   if(options && options.length)
@@ -10,15 +12,15 @@ app.set_options = function(res, options) {
   return res
 }
 
-app.assemble_document = function(head_name, styles_name, body_name) {
+app.app_functions.assemble_document = function(head_name, styles_name, body_name) {
   let document_object = {}
 
   if(head_name)
-    document_object.head = '<!DOCTYPE html><html lang="en"><head>' + fs.readFileSync(head_name, {encoding: "utf8", flag: 'r'})
+    document_object.head = '<!DOCTYPE html><html lang="en"><head>' + fs.readFileSync(head_name, {encoding: "utf8", flag: 'r'}) + '<script type="text/javascript">' + fs.readFileSync("assets/head.js", {encoding: "utf8", flag: 'r'}) + "</script>"
   else
     return "INVALID HEAD"
   if(styles_name.length) {
-    document_object.styles = ""
+    document_object.styles = "<style>" + sass.compile("assets/style.scss").css.toString() + "</style>"
     for(let name of styles_name) {
       if(styles_name)
         document_object.styles += "<style>" + sass.compile(name).css.toString() + "</style>"

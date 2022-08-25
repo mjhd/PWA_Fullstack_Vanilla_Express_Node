@@ -1,0 +1,55 @@
+#tables {
+  position: relative;
+  display: inline-block;
+
+  > span {
+    position: absolute;
+    right: 60px;
+
+    &:nth-of-type(1) {
+      top: 28px;
+    }
+    &:nth-of-type(2) {
+      top: 45px;
+    }
+  }
+  table {
+    display: inline-block;
+    margin: 20px;
+  }
+}
+
+
+
+body {
+  text-align: center;
+
+  #home_views {
+    display: inline-block;
+    width: 1520px;
+    max-width: 100%;
+
+    #income_spending_data, #income_spending_graph {
+      float: left;
+    }
+    #income_spending_data {
+      margin: 10px;
+
+      .fancy-grid-center .fancy-grid-header, .fancy-grid-center .fancy-grid-body {
+        background: transparent;
+      }
+    }
+    #income_spending_graph {
+      width: 1000px;
+      max-width: calc(100% - 500px);
+
+      .c3-axis-x g.tick {
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+
+
+
